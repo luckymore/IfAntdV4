@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 import './index.css';
 import InputNumber from './IfAntdV4/InputNumber/demo';
+import DragTable from './IfAntdV4/DragTable/demo';
 import { Collapse, Tag } from 'antd';
 
 const { Panel } = Collapse;
@@ -31,6 +32,7 @@ ReactDOM.render(
         key="2"
       >
         拖拽表格
+        <DragTable />
       </Panel>
     </Collapse>
   </>,
