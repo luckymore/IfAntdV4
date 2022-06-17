@@ -1,3 +1,3 @@
-## InputNumber
+## InputNumber 数字输入框
 
-<code src="./demo/index.js"></code>
+<code src="./demos/index.js"></code>

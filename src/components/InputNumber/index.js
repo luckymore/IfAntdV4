@@ -8,6 +8,7 @@ import React, { forwardRef } from 'react';
 import { InputNumber } from 'antd';
 import classnames from 'classnames';
 import './index.less';
+import 'antd/es/input/style/index'
 
 /**
  * - 支持 addonAfter/addonBefore

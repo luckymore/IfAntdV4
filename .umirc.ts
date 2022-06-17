@@ -1,7 +1,7 @@
 export default {
-  // mfsu: {},
+  mfsu: {},
   hash: true,
-  title: 'dumi',
+  title: 'IfAntdV4',
   mode: 'site',
   favicon: 'https://img.alicdn.com/tfs/TB1YHEpwUT1gK0jSZFhXXaAtVXa-28-27.svg',
   navs: [
@@ -14,27 +14,30 @@ export default {
         title: '增强组件',
         children: [
           'components/InputNumber',
-          'components/DragTable',
+          'components/DragSortTable',
         ],
       },
     ],
   },
-  // extraBabelPlugins: [
-  //   [
-  //     'import',
-  //     {
-  //       libraryName: 'antd',
-  //       libraryDirectory: 'es',
-  //       style: 'css',
-  //     },
-  //   ],
-  // ],
+  extraBabelPlugins: [
+    [
+      'import',
+      {
+        libraryName: 'antd',
+        libraryDirectory: 'es',
+        style: 'css',
+      },
+    ],
+  ],
+  chainWebpack (config) {
+    config.module.rule('mjs-rule').test(/.m?js/).resolve.set('fullySpecified', false)
+  },
   scripts: ['https://v1.cnzz.com/z_stat.php?id=1278653578&web_id=1278653578'],
   analytics: {
     ga: 'UA-128069695-2',
   },
   styles: ['a[title=站长统计] { display: none; }'],
-  exportStatic: {},
+  // exportStatic: {},
   sitemap: {
     hostname: 'https://d.umijs.org',
   },
