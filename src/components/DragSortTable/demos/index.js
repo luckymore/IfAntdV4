@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
+import { Switch } from 'antd'
 import DragTable from '../index'
 
 const columns = [
   {
-    key: 'sort',
     title: '排序',
+    key: 'sort'
   },
   {
     title: 'Name',
@@ -55,18 +56,26 @@ const rowSelection = {
 
 const App = () => {
   const [dataSource1, setDatasource1] = useState(data)
+  const [canDrag, setCanDrag] = useState(false)
+
   const handleDragSortEnd1 = newDataSource => {
     console.log('排序后的数据', newDataSource)
     setDatasource1(newDataSource)
   }
+
   return (
-    <DragTable
-      dataSource={dataSource1}
-      columns={columns}
-      onDragSortEnd={handleDragSortEnd1}
-      rowKey="key"
-      dragSortKey="sort"
-    />
+    <>
+      允许拖拽：<Switch onChange={setCanDrag}></Switch>
+      <DragTable
+        dataSource={dataSource1}
+        columns={columns}
+        rowKey="key"
+        // dragSortKey={canDrag ? 'sort' : ''}
+        dragSortKey="sort"
+        disabled={!canDrag}
+        onDragSortEnd={handleDragSortEnd1}
+      />
+    </>
   )
 }
 

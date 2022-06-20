@@ -8,15 +8,14 @@
 ### 普通场景
 <code src="./demos/index.js"></code>
 
-
-### rowSelect 场景
-
-<code src="./demos/row-select.js" background="#f5f5f5" height="360px" title="拖拽排序" />
-
+### 
+<code src="./demos/row-select.js" title="rowSelect" />
 
 ### 固定列
+<code src="./demos/fixed.js" title="固定列" />
 
-<code src="./demos/fixed.js" background="#f5f5f5" height="360px" title="拖拽排序" />
+### 自定义把手
+<code src="./demos/custom-handle.js" title="固定列" />
 
 
 ### 可编辑表单

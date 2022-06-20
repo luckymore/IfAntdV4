@@ -11,7 +11,8 @@ const DragTable = props => {
     dataSource: oriDs,
     columns: propsColumns,
     rowKey,
-    dragSortKey,
+    disabled,
+    dragSortKey = '',
     dragSortHandlerRender,
     onDragSortEnd,
     ...otherTableProps
@@ -53,6 +54,7 @@ const DragTable = props => {
     onDragSortEnd,
     components: props.components,
     rowKey,
+    disabled
   })
 
   // 重写列配置的render
@@ -83,26 +85,18 @@ const DragTable = props => {
     })
   }, [DragHandle, dragSortHandlerRender, handleColumn, isDragSortColumn, propsColumns])
 
-  return <Table {...otherTableProps} pagination={false} dataSource={oriDs} columns={[
-    {
-      key: 'sort',
-      title: '排序',
-      render: () => <DragHandle />
-    },
-    {
-      title: 'Name',
-      dataIndex: 'name',
-      className: 'drag-visible',
-    },
-    {
-      title: 'Age',
-      dataIndex: 'age',
-    },
-    {
-      title: 'Address',
-      dataIndex: 'address',
-    },
-  ]} components={components} />
+  return true ? (
+    <Table
+      {...otherTableProps}
+      rowKey={rowKey}
+      pagination={false}
+      dataSource={oriDs}
+      columns={columns}
+      components={components}
+    />
+  ) : (
+    <Table {...otherTableProps} rowKey={rowKey} pagination={false} dataSource={oriDs} columns={columns} />
+  )
 }
 
 export default DragTable

@@ -3,6 +3,7 @@ export default {
   hash: true,
   title: 'IfAntdV4',
   mode: 'site',
+  dynamicImport: {},
   favicon: 'https://img.alicdn.com/tfs/TB1YHEpwUT1gK0jSZFhXXaAtVXa-28-27.svg',
   navs: [
     { title: '组件', path: '/components' },
