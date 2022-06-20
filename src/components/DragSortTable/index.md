@@ -5,31 +5,21 @@
 
 ## Demo
 
-### 普通场景
+### 拖拽排序
 <code src="./demos/index.js"></code>
 
-### 
-<code src="./demos/row-select.js" title="rowSelect" />
+### row select
+<code src="./demos/row-select.js" />
 
 ### 固定列
-<code src="./demos/fixed.js" title="固定列" />
+<!-- TODO: 不支持固定列 -->
+<code src="./demos/fixed.js" />
 
 ### 自定义把手
-<code src="./demos/custom-handle.js" title="固定列" />
-
-
-### 可编辑表单
-
-
-
-
-### 拖拽排序
-
-
+<code src="./demos/custom-handle.js" />
 
 ### 拖拽排序编辑表格
-
-<!-- <code src="./demos/drag-sort-table.tsx" background="#f5f5f5" height="360px" title="可编辑表格" /> -->
+<code src="./demos/edit.js" />
 
 ## API
 

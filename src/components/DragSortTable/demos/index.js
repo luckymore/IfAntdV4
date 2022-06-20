@@ -56,7 +56,7 @@ const rowSelection = {
 
 const App = () => {
   const [dataSource1, setDatasource1] = useState(data)
-  const [canDrag, setCanDrag] = useState(false)
+  const [canDrag, setCanDrag] = useState(true)
 
   const handleDragSortEnd1 = newDataSource => {
     console.log('排序后的数据', newDataSource)
@@ -65,12 +65,11 @@ const App = () => {
 
   return (
     <>
-      允许拖拽：<Switch onChange={setCanDrag}></Switch>
+      允许拖拽：<Switch checked={canDrag} onChange={setCanDrag}></Switch>
       <DragTable
         dataSource={dataSource1}
         columns={columns}
         rowKey="key"
-        // dragSortKey={canDrag ? 'sort' : ''}
         dragSortKey="sort"
         disabled={!canDrag}
         onDragSortEnd={handleDragSortEnd1}

@@ -5,21 +5,30 @@ const columns = [
   {
     key: 'sort',
     title: '排序',
-    fixed: true
+    fixed: true,
+    width: 100
+  },
+  {
+    title: '序号',
+    dataIndex: 'index',
+    width: 100,
+    className: "drag-visible"
   },
   {
     title: 'Name',
     dataIndex: 'name',
-    className: 'drag-visible',
-    fixed: true
+    width: 200,
+    className: "drag-visible"
   },
   {
     title: 'Age',
     dataIndex: 'age',
+    width: 100
   },
   {
     title: 'Address',
     dataIndex: 'address',
+    width: 500
   },
 ]
 const data = [
@@ -67,6 +76,7 @@ const App = () => {
       dataSource={dataSource1}
       columns={columns}
       onDragSortEnd={handleDragSortEnd1}
+      scroll={{ x: 500 }}
       rowKey="key"
       dragSortKey="sort"
     />

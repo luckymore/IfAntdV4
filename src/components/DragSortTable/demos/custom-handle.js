@@ -87,15 +87,15 @@ export default () => {
   )
   return (
     <>
-      <h2>默认把手</h2>
+      <h4>默认把手</h4>
       <DragSortTable
         columns={columns}
         rowKey="key"
         dataSource={dataSource1}
-        // dragSortKey="sort"
-        // onDragSortEnd={handleDragSortEnd1}
+        dragSortKey="sort"
+        onDragSortEnd={handleDragSortEnd1}
       />
-      <h2>自定义把手</h2>
+      <h4>自定义把手</h4>
       <DragSortTable
         columns={columns2}
         rowKey="index"
